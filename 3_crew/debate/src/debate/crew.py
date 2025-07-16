@@ -6,7 +6,6 @@ from crewai.project import CrewBase, agent, crew, task
 class Debate():
     """Debate crew"""
 
-
     agents_config = 'config/agents.yaml'
     tasks_config = 'config/tasks.yaml'
 
@@ -42,14 +41,13 @@ class Debate():
             config=self.tasks_config['decide'],
         )
 
-
     @crew
     def crew(self) -> Crew:
         """Creates the Debate crew"""
 
         return Crew(
-            agents=self.agents, # Automatically created by the @agent decorator
-            tasks=self.tasks, # Automatically created by the @task decorator
+            agents=self.agents,  # Automatically created by the @agent decorator
+            tasks=self.tasks,  # Automatically created by the @task decorator
             process=Process.sequential,
             verbose=True,
         )
