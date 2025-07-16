@@ -1,7 +1,7 @@
 #!/usr/bin/env python
+import os
 import sys
 import warnings
-import os
 from datetime import datetime
 
 from stock_picker.crew import StockPicker
@@ -13,10 +13,7 @@ def run():
     """
     Run the research crew.
     """
-    inputs = {
-        'sector': 'Technology',
-        "current_date": str(datetime.now())
-    }
+    inputs = {"sector": "Technology", "current_date": str(datetime.now())}
 
     # Create and run the crew
     result = StockPicker().crew().kickoff(inputs=inputs)
