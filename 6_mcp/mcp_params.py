@@ -20,7 +20,6 @@ else:
 
 
 # The full set of MCP servers for the trader: Accounts, Push Notification and the Market
-
 trader_mcp_server_params = [
     {"command": "uv", "args": ["run", "accounts_server.py"]},
     {"command": "uv", "args": ["run", "push_server.py"]},
